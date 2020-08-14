@@ -15,16 +15,18 @@
         header("location: error.php");
     }
 
-    $API_KEY = "<YOUR_API_KEY>";
+    $API_KEY = "<YOUR API KEY>";
 
 ?>
 <html>
     <head>
+    <style>
+        .prods .user {
+            cursor: pointer;
+        }
+    </style>
     </head>
     <body>
-
-    <p></p>
-    <p></p>
 
     <input type = 'checkbox' name = 'tourist' id = "tourist">
     <label for = "tourist">Tourist</label>
@@ -34,7 +36,10 @@
     </div>
 
     <button id = "req"><a href = "addRequest.php">Request Product or Service</a></button>
-    <button id = "add"><a href = "addProdOrServ.php">Add Product or Service</a></button>
+    <button id = "add"><a href = "addProdOrServ.php">Add Product or Service</a></button><br>
+    <button><a href = "searchQ.php">Search</a></button><br>
+
+    <p><a href = "logout.php">Log out</a></p>
 
 
     <form action = "deal.php" method = "POST" id = "deal" hidden>
@@ -58,10 +63,6 @@
 
                     lat = currentLatitude;
                     long = currentLongitude;
-
-                    var p = document.querySelectorAll("p");
-                    p[0].innerHTML = "Latitude: " + currentLatitude;
-                    p[1].innerHTML = "Longitude: " + currentLongitude;
 
                     setActive();
                 });
@@ -158,9 +159,6 @@
             };
             xhttp.send(params); 
         }
-
-        //Find a way to get location in background
-        //Email user about deals
 
         function setActive() {
 
