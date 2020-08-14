@@ -15,11 +15,16 @@
         header("location: error.php");
     }
 
-    $API_KEY = "AIzaSyD9bijpOpTAWO69lpuQpkmgkZmgkJZq1eo";
+    $API_KEY = "<YOUR API KEY>";
 
 ?>
 <html>
     <head>
+        <style>
+            .prods .user {
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body>
 
@@ -36,7 +41,10 @@
     </div>
 
     <button id = "req"><a href = "addRequest.php">Request Product or Service</a></button>
-    <button id = "add"><a href = "addProdOrServ.php">Add Product or Service</a></button>
+    <button id = "add"><a href = "addProdOrServ.php">Add Product or Service</a></button><br>
+
+    <p><a href = "home.php">Home</a></p>
+    <p><a href = "logout.php">Log out</a></p>
 
 
     <form action = "deal.php" method = "POST" id = "deal" hidden>
