@@ -4,4 +4,4 @@ Small World helps locals and tourists connect with each other so it's a win-win 
 
 Home page - index.php
 
-The app uses the Google Maps API. Kindly enter your own api key in the home.php page
+The app uses the Google Maps API. Kindly enter your own api key in the home.php and searchQ.php page
