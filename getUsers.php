@@ -38,7 +38,7 @@
 
     $setLocation = $mysqli->query("UPDATE users SET latitude = $lat, longitude = $long WHERE username = '$username'");
 
-    $getUsers = $mysqli->query("SELECT username FROM users WHERE (latitude - $lat)*(latitude - $lat)*110947.2 + (longitude - $long)*(longitude - $long)*87843.36 <= 25 AND tourist = $opp AND username != '$username'");
+    $getUsers = $mysqli->query("SELECT username FROM users WHERE (latitude - $lat)*(latitude - $lat)*110947.2 + (longitude - $long)*(longitude - $long)*87843.36 <= 10000 AND tourist = $opp AND username != '$username'");
 
     $users = array();
 
